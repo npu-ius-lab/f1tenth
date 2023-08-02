@@ -11,13 +11,14 @@ catkin_make
 ```
 ## Usage
 1. Start a simulator
+
 cd catkin_ws
 ```
 source devel/setup.bash
 roslaunch f1tenth_simulator simulator.launch
 
 ```
-2. run!
+2. Run!
 
 cd catkin_ws
 ```
