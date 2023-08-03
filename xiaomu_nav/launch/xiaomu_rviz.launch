@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node pkg="rviz" type="rviz" name="rviz_nav" args="-d $(find xiaomu_nav)/rviz/teb_nav.rviz"  />
+
+</launch>

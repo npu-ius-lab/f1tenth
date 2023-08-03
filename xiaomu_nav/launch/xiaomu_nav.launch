@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- map
+       <arg name="map" default="$(find f1tenth_simulator)/maps/levine_blocked.yaml"/>
+    -->
+    <arg name="map" default="$(find f1tenth_simulator)/maps/levine_blocked.yaml"/>
+
+    <!--simulator-->
+    <include file="$(find f1tenth_simulator)/launch/simulator.launch">
+        <arg name="map" value="$(arg map)"/>
+    </include>
+
+    <!-- Map server -->
+    <node name="map_server_slam" pkg="map_server" type="map_server" args="$(find xiaomu_nav)/maps/levine_slam.yaml">
+    <remap from="map" to="slam_map"/>
+    </node>
+
+    <!-- Navigation -->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base">
+        <!-- costmap layers -->    
+        <rosparam file="$(find xiaomu_nav)/param/local_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find xiaomu_nav)/param/global_costmap_params.yaml" command="load"/> 
+        <!-- move_base params -->
+        <rosparam file="$(find xiaomu_nav)/param/move_base_params.yaml" command="load"/>
+    </node>
+
+    <!-- L1 controller -->  
+    <node pkg="tianracer_navigation" type="L1_controller_v2" respawn="false" name="L1_controller_v2" output="screen">       
+        <!-- L1 -->
+        <param name="Vcmd" value="1.0" /> <!-- speed of car m/s -->        
+        <!-- ESC -->
+	<param name="base_speed" value="1.0"/> <!-- speed of car m/s  --> 
+        <!-- Servo -->
+        <param name="base_angle" value="0.0"/> <!-- the middle pos of servo if tuning needed  -->
+        <param name="angle_gain" value="-3.5"/> <!-- for tt02: >0, for hsp: <0 -->		
+
+        <!-- remap from="/odometry/filtered" to="odom" / --> 
+        <remap from="/move_base_node/NavfnROS/plan" to="/move_base/NavfnROS/plan" /> 
+    </node>
+
+<!--
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tianracer_rviz)/rviz_cfg/tianbot_amcl.rviz" if="$(arg use_rviz)" />
+-->
+</launch>

@@ -1,0 +1,10 @@
+
+如何建立地图slam
+
+读取地图（在地图的文件夹下）：rosrun map_server map_server 地图名字.yaml
+
+slam建图步骤：
+
+1.打开f1仿真环境：你自己的你知道
+2.建立地图（将map做一个重命名）：rosrun gmapping slam_gmapping map:=slam_map
+3.在你的maps文件夹下打开终端输入（好处可以不用添加你不懂的命令）：rosrun map_server map_saver map:=slam_map -f 地图名字

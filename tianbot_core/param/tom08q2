@@ -1,0 +1,36 @@
+#描述
+desc tom08q2
+#类型 mecanum omni diff
+base_type mecanum
+#轮距/2 单位m
+base_a 0.219000
+#轴距/2 单位m
+base_b 0.210000
+#轮子半径
+wheel_r 0.076000
+#电机减速比 3508 19.2 2006 36
+motor_reduction 19.200000
+#最大角速度 单位弧度
+max_w 3.141593
+#最大线速度 单位 m/s
+max_speed 1.500000
+#pid参数
+pid_p 15.000000
+pid_i 0.200000
+pid_d 0.300000
+pid_max_out 16384.000000
+pid_i_limit 16384.000000
+#编码器一圈计数，减速前
+ticks_per_lap 8192
+#编码器溢出值
+max_ticks 8192
+#控制周期 单位ms
+ctrl_period 5
+#反馈周期 单位ms
+feedback_period 20
+#姿态计算周期 单位ms
+pose_calc_period 1
+#磁导航巡线 最大线速度
+mag_v 0.200000
+#磁导航 最大角速度
+mag_max_w 0.800000
