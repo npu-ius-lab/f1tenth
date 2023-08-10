@@ -3,7 +3,7 @@
 ## Build
 In catkin_ws/src:
 ```
-git clone git@github.com:cavayangtao/f1tenth.git
+git clone git@github.com:npu-iuslab/f1tenth.git
 cd ..
 catkin_make
 ```
