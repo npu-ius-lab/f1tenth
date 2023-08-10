@@ -1,5 +1,7 @@
 # f1tenth
 
+The Second place strategy in F1TENTH ICAUS 2022.
+
 ## Build
 In catkin_ws/src:
 ```
