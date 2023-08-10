@@ -9,7 +9,7 @@ catkin_make
 ```
 
 ## Usage
-Start a simulator
+Start a simulator:
 ```
 source devel/setup.bash
 roslaunch f1tenth_simulator simulator.launch
