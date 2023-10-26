@@ -1,7 +1,7 @@
 #pragma once
 
-#include "f1tenth_simulator/car_state.hpp"
-#include "f1tenth_simulator/car_params.hpp"
+#include "f1tenth_reactive_simulator/car_state.hpp"
+#include "f1tenth_reactive_simulator/car_params.hpp"
 
 namespace racecar_simulator {
 

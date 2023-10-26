@@ -11,8 +11,8 @@
 
 #include <fstream>
 
-#include "f1tenth_simulator/car_state.hpp"
-#include "f1tenth_simulator/precompute.hpp"
+#include "f1tenth_reactive_simulator/car_state.hpp"
+#include "f1tenth_reactive_simulator/precompute.hpp"
 
 using namespace racecar_simulator;
 
@@ -170,7 +170,7 @@ public:
         // Create collision file to be written to
         std::string filename;
         n.getParam("collision_file", filename);
-        collision_file.open(ros::package::getPath("f1tenth_simulator") + "/logs/" + filename + ".txt");
+        collision_file.open(ros::package::getPath("f1tenth_reactive_simulator") + "/logs/" + filename + ".txt");
         beginning_seconds = ros::Time::now().toSec();
 
     }

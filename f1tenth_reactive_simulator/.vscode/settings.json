@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/tianbot/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/tianbot/study_ws/devel/lib/python3/dist-packages",
+        "/home/tianbot/manipulation_ws/devel/lib/python3/dist-packages",
+        "/home/tianbot/tianbot_mini_ws/devel/lib/python3/dist-packages",
+        "/home/tianbot/tianbot_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/tianbot/.ros1/lib/python/site-packages",
+        "/usr/lib/python3/dist-packages/"
+    ]
+}
