@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(f1tenth_simulator)
+project(f1tenth_reactive_simulator)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -88,7 +88,7 @@ if(DEFINED CATKIN_DEVEL_PREFIX)
       get_filename_component(_node_name ${_node_file} NAME_WE)
       add_executable(${_node_name} ${_node_file})
       target_link_libraries(${_node_name} ${LIBS})
-      add_dependencies(${_node_name} f1tenth_simulator_generate_messages_cpp)
+      add_dependencies(${_node_name} f1tenth_reactive_simulator_generate_messages_cpp)
   endforeach()
 
   # Install the library
