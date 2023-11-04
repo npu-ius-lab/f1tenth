@@ -38,3 +38,4 @@ rosrun f1tenth_tianracer_navigation tianracer_multi_goals.launch
 ## TroubleShooting
 
 If you cannot start the relevant nodes, it is possible that you need to give execution permissions to Python files in the corresponding "scripts" folder.
+
