@@ -1,0 +1,22 @@
+<launch>
+    <!-- For Simulation -->
+    <arg name="sim_mode" default="false" />
+    <param name="/use_sim_time" value="$(arg sim_mode)"/>
+    
+    <!-- move base -->
+    <node pkg="f1tenth_tianracer_navigation" type="tianbot_multi_goals.py" respawn="false" name="multi_goals" output="screen">
+        <!-- params for move_base -->
+        <!-- <param name="goalListX" value="[-2.798, -3.764 , -1.735, -0.144]" />
+        <param name="goalListY" value="[3.926, -2.248, -9.298, 0.057]" /> -->
+        <param name="goalListX" value="[0.78905, 1.34881 , 1.27463, 0.65080]" />
+        <param name="goalListY" value="[0.11127, 0.21581, -0.14499, -0.22929]" />
+
+        <param name="QuaternionListX" value="[0, 0 , 0, 0]" />
+        <param name="QuaternionListY" value="[0, 0, 0, 0]" />
+        <param name="QuaternionListZ" value="[0.01470, -0.00724 , -0.98195, 0.99495]" />
+        <param name="QuaternionListW" value="[0.99989, 0.99997, 0.18910, 0.10031]" />
+        <param name="map_frame" value="tianbot_mini/map" />
+    </node>
+    
+
+</launch>
