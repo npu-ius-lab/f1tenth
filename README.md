@@ -4,7 +4,12 @@ The second-place strategy in F1TENTH ICAUS 2022. And This repository primarily f
 
 ## 编译
 
-相关代码主要运行在Ubuntu20.04和ros1-noetic环境下，在catkin_ws/src路径下:
+相关代码主要运行在Ubuntu20.04和ros1-noetic环境下，需要提前安装的ros库：
+```
+sudo apt-get install ros-noetic-ackermann-msgs
+sudo apt-get install ros-noetic-effort-controllers
+```
+在catkin_ws/src路径下:
 ```
 git clone git@github.com:npu-iuslab/f1tenth.git
 cd ..
@@ -48,13 +53,15 @@ roslaunch f1tenth_tianracer_navigation tianracer_multi_goals.launch
 ```
 
 在已经建好的地图上，可以通过话题move_base_simple/goal来记录或发布导航点，执行导航命令。而多点导航的原理即通过脚本循环发布导航点，而发布下一个导航点的前提条件是通过计算小车当前位置与导航点的距离小于某个阈值。故增大阈值，可以提高小车经过导航点的速度以及减少调整的时间，但是会适当降低精度。减小阈值，小车往往需要花费时间来调整自身的位姿以达到要求，但是会显著提高小车到达导航点的精度。
+
 其次是导航点的具体参数，即在地图上的二维坐标以及四元数，这个需要在地图上自己规划，合理的导航点可以减少小车的调整和决策时间，从而更加流畅的完成导航任务。tianracer_multi_goals.launch的主要功能是启动multi_goals.py的ROS节点，为该节点提供导航点的坐标和姿态四元数。其中goalListX和goalListY为x、y坐标，QuaternionListX、QuaternionListY、QuaternionListZ、QuaternionListW为到达目标点的位姿四元数。具体执行效果如下：
+
 <img src="./image/template1.png" >  
 
 <img src="./image/multi_goals.png" >  
 
 ## 问题分析
-由于ROS2GO的环境问题，在启动仿真环境时会缺乏PyKDL库的索引，直接的解决方法是进入环境变量配置文件.bashrc后添加相关的路径索引：
+由于系统的环境问题，在启动仿真环境时会缺乏PyKDL库的索引，直接的解决方法是进入环境变量配置文件.bashrc后添加相关的路径索引：
 ```
 sudo gedit ~/.bashrc
 export PYTHONPATH="${PYTHONPATH}:/usr/lib/python3/dist-packages/"
