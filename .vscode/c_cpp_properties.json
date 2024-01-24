@@ -1,0 +1,43 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/tianbot/tt_ws/devel_isolated/tf2_msgs/include/**",
+        "/home/tianbot/tt_ws/devel_isolated/rmtt_tracker/include/**",
+        "/home/tianbot/tt_ws/devel_isolated/apriltag_ros/include/**",
+        "/home/tianbot/tianbot_mini_ws/devel/include/**",
+        "/home/tianbot/tianbot_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/tianbot/tt_ws/devel_isolated/apriltag/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/apriltag_ros/include/**",
+        "/home/tianbot/tianbot_ws/src/ros_astra_camera/include/**",
+        "/home/tianbot/catkin_ws/src/f1tenth/f1tenth_reactive_simulator/include/**",
+        "/home/tianbot/tianbot_ws/src/osight_lidar/include/**",
+        "/home/tianbot/tianbot_ws/src/rosecho/include/**",
+        "/home/tianbot/tianbot_mini_ws/src/rosserial/rosserial_server/include/**",
+        "/home/tianbot/tianbot_mini_ws/src/rosserial/rosserial_test/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_bullet/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_eigen/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_geometry_msgs/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_kdl/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_msgs/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_ros/include/**",
+        "/home/tianbot/tt_ws/src/rmtt_ros/geometry2-0.7.5/tf2_sensor_msgs/include/**",
+        "/home/tianbot/tianbot_ws/src/tianbot/tianbot_core/include/**",
+        "/home/tianbot/tianbot_ws/src/tianracer/tianracer_core/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
