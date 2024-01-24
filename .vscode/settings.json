@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/tianbot/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/tf2_sensor_msgs/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/tf2_kdl/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/tf2_geometry_msgs/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/tf2_ros/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/tf2_py/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/tf2_msgs/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/rmtt_tracker/lib/python3/dist-packages",
+        "/home/tianbot/tt_ws/devel_isolated/apriltag_ros/lib/python3/dist-packages",
+        "/home/tianbot/tianbot_mini_ws/devel/lib/python3/dist-packages",
+        "/home/tianbot/tianbot_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/tianbot/.ros1/lib/python/site-packages",
+        "/usr/lib/python3/dist-packages/"
+    ]
+}

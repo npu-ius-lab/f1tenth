@@ -1,0 +1,8 @@
+<launch>
+
+    <include file="$(find tianracer_slam)/launch/tianracer_gmapping.launch"/>
+
+    <!-- 启动rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find f1tenth_tianracer_gazebo)/rviz/gmapping.rviz"/>
+
+</launch>
